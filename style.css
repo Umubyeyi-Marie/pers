@@ -240,6 +240,7 @@ home-row p span {
 }
 
 /*---about --section ---*/
+
 #about {
     padding: 70px 30px;
 }
@@ -263,32 +264,26 @@ home-row p span {
     letter-spacing: 0.4px;
     font-weight: 400;
     margin-top: 15px;
+    font-style: italic;
 }
 
 #about .about-col {
     display: flex;
     gap: 20px;
     margin-top: 25px;
-
 }
 
 #about .about-col .img-col {
     flex-basis: 35px;
     text-align: center;
-
 }
 
 #about .about-col .img-col img {
-    /*width: 250px;
- height: 220px;
-*/
     width: 100%;
 }
 
 #about .about-col .info-col {
     flex-basis: 80%;
-
-
 }
 
 #about .about-col .info-col h2 {
@@ -297,7 +292,6 @@ home-row p span {
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-top: -10px;
-
 }
 
 #about .about-col .info-col p {
@@ -326,7 +320,6 @@ home-row p span {
     color: var(--sideBGColor);
     font-weight: 600;
     margin-right: 2px;
-
 }
 
 #about .about-col .info-col .icon-list-col ul li span {
@@ -335,7 +328,7 @@ home-row p span {
     font-size: 15px;
 }
 
-@media only screen and (max-width:830px) {
+@media only screen and (max-width: 830px) {
     #about {
         padding: 50px 10px;
     }
@@ -351,7 +344,7 @@ home-row p span {
     }
 
     #about .about-col .img-col img {
-        width: 50%
+        width: 50%;
     }
 
     #about .about-col .info h2 {
@@ -372,7 +365,6 @@ home-row p span {
         gap: 0;
     }
 
-
     #about .about-col .info-col .icon-list-col .icon-list ul li {
         list-style: none;
         margin: 10px 0;
@@ -389,8 +381,7 @@ home-row p span {
     }
 }
 
-
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
     #about .about-col .img-col img {
         width: 50%;
     }
@@ -398,7 +389,7 @@ home-row p span {
     #about .about-col .info-col h2 {
         font-weight: 600;
         font-size: 25px;
-        letter-spacing: opx;
+        letter-spacing: 0px;
     }
 
     #about .about-col .info-col p {
@@ -413,11 +404,10 @@ home-row p span {
 
     #about .about-col .info-col .icon-list-col .icon-list ul li {
         margin: 10px 0;
-
     }
 
     #about .about-col .info-col .icon-list-col .icon-list ul li strong {
-        font-weight: 500px;
+        font-weight: 500;
         margin-right: 0px;
     }
 
@@ -425,54 +415,65 @@ home-row p span {
         font-weight: 400;
         font-size: 13px;
     }
-
 }
 
 
-
-
     /*--- skill -----section-----*/
-    #skill{
+    #skill {
         padding: 70px 30px;
     }
-    #skill .skill-row{
+    
+    #skill .skill-row {
         margin-top: 35px;
-        display:grid;
-        grid-template-columns:repeat(2,1fr) ;
-        grid-gap:20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
     }
-    #skill .skill-row .skill-box .skill-info{
-        display:flex;
+    
+    #skill .skill-row .skill-box {
+        grid-column: span 2; /* Make each skill box span two columns */
+    }
+    
+    #skill .skill-row .skill-box .skill-info {
+        display: flex;
+        flex-direction: column; /* Display skill info in a single column */
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4px;
     }
-    #skill .skill-row .skill-box .skill-info h2{
+    
+    #skill .skill-row .skill-box .skill-info h2 {
         color: var(--sideBGColor);
         font-weight: 600;
         font-size: 15px;
         font-style: italic;
+        border: 1px solid black; 
     }
-    #skill .skill-row .skill-box .skill-outer-line{
-        width:100%;
-        height:10px;
+    
+    #skill .skill-row .skill-box .skill-outer-line {
+        width: 100%;
+        height: 10px;
         background-color: lightgray;
         border-radius: 15px;
     }
-    #skill .skill-row .skill-box .skill-outer-line .skill-inner-line{
-        height:10px;
+    
+    #skill .skill-row .skill-box .skill-outer-line .skill-inner-line {
+        height: 10px;
         background-color: var(--themeColor);
         border-radius: 20px;
     }
-    @media only screen and (max-width:450px){
-        #skill{
+    
+    @media only screen and (max-width: 450px) {
+        #skill {
             padding: 50px 15px;
         }
-        #skill .skill-row{
-            grid-template-columns: repeat(1,1fr);
-            grid-gap:10px;
+        #skill .skill-row {
+            grid-template-columns: repeat(1, 1fr); /* Change to a single column layout */
+            grid-gap: 10px;
         }
     }
+    
+
     /*--- contact---*/
     #contact{
         padding: 70px 30px;
@@ -489,8 +490,9 @@ home-row p span {
         min-width: 40%;
         background-color: white;
         box-shadow: 0 0 20px rgba(0, 0, 0 ,20%);
-        box-radius:50%;
+        border-radius:10% ;
         padding: 30px;
+        height: 30%;
 
     }
     #contact .contact-row .contact-left .icon-box{
@@ -529,9 +531,10 @@ home-row p span {
         min-width:60%;
         background-color: white;
         box-shadow: 0 0 20px rgba(0,0,0, 20%);
-        border-radius: 4px;
+        border-radius: 10%;
         padding: 30px;
-
+        width:60%;
+      
     }
     #contact .contact-row .contact-right form{
         display: flex;

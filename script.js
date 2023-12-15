@@ -1,9 +1,15 @@
-let MenuBtn= document.getElementById("MenuBtn");
+$(document).ready(function () {
+    $('#menu').click(function () {
+        $(this).toggleClass('fa-times');
+        $('header').toggleClass('toggle');
+    });
 
-MenuBtn.addEventListener('click',function(e){
-    document.querySelector('body').classList.toogle('mobile-nav-active');
-    this.classList.toggle('fa-xmark')
-})
+    $(window).on('scroll load', function () {
+        $('#menu').removeClass('fa-times');
+        $('header').removeClass('toggle');
+    });
+});
+
 
 
 let typed = new Typed('.auto-input',{
@@ -13,22 +19,4 @@ let typed = new Typed('.auto-input',{
  backDelay:2000,
     loop:true,
 
-})
-let navLinks=document.querySelectorAll("nav ul li a")
-
-let sections= document.querySelectorAll("section")
-console.log(sections)
-window.addEventListener('scroll',function(){
-    const scrollPos = window.scrollY
-    sections.forEach(section =>{
-        if(scrollPos > section.offsetTop&& scrollPos <(section.offsetTop +section.offsetHeight)){
-            navLinks.forEach(link =>
-                link.classList.remove("active");
-                if(section.getAttribute('id')===link.getAttribute('href').substring(1)){
-                    link.classList.add("active")
-                }
-        })
-    }
-})
-
-    })
+});

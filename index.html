@@ -1,98 +1,79 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Personal portofolio Website</title>
+    <title>My portfolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
-</head>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
+    <script src='script.js'></script>
+</head>
 <body>
     <header>
-
-
-        <div class="profile">
-            <img src="c:\Users\USER\Pictures\Saved Pictures\o1d7ubhf.png" alt="o1d7ubhf.png">
-            <h1>Umubyeyi Marie Bienvenue</h1>
-            <div class="social-icons">
-                <a href="www.facebook.com"><i class="fa-facebook"></i></a>
-                <a href="www.instagram.com"><i class="fa-instagram"></i></a>
-                <a href="www.whatsapp.com"><i class="fa-whatsapp"></i></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="home.html" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li><a href="about.html"><i class="fa-solid fa-user"></i>About me</a></li>
-                    <li><a href="skill.html"><i class="fa-solid fa-server"></i>Skills</a></li>
-                    <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
-                </ul>
-            </nav>
-            <div class="footer">
-                <p>
-                    &copy; Copyright 2023
-                </p>
-            </div>
+        <div class="user">
+            <img src="c:\Users\USER\Documents\personal\o1d7ubhf.png"  alt="1.png">
+            <h3 class="name">Umubyeyi Marie Bienvenue</h3>
+            <p class="post">Backend developer</p>
         </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skill">skill</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <i class="fa-solid fa-bars" id="MenuBtn"></i>
+    <div id="menu" class="fas fa-bars"></div>
+    <section class="home" id="home">
+        <h3>HI THERE!</h3>
+        <h1>I'm <span>Umubyeyi Marie Bienvenue</span></h1>
+        <p>I am a <span class="auto-input">Backend Developer</span></p>
+        <a href="#about.html"><button class="btn">about me<i class="fas fa-user"></i></button></a>
+    </section>
+
+    <section id="about">
+        <h1 class="sub-heading">About Me</h1>
+        <div class="divider"></div>
+        <p class="sub-para">Hi I'm a budding backend developer on an exciting journey into the world of server-side
+            technologies. My passion lies in building robust and scalable solutions that power the backbone of web
+            applications.Me, my brain, my eyes,my hands and some materials like a computer and some cool
+            programming languages can do very spectacular things. I can't think about how much great things we
+            could do if we worked together.
+        </p>
+        <div class="about-col">
 
 
-    <main>
-        <section id="home">
-            <div class="home-row">
-                <h1> Hi,This is<br>Umubyeyi Marie Bienvenue </br></h1>
-                <p>I'am a <span class="auto-input">Backend Developer</span></p>
-            </div>
-        </section>
+            <div class="info-col">
+                <h2>backend Developer</h2>
+                <p class="sub-para">I consider myself as an individual with a strong sense of adaptability.
+                    My experiences have shaped me into a resourceful problem solver who enjoys taking on new
+                    challenges. </p>
+                <div class="icon-list-col">
 
-
-
-        <section id="about">
-            <h1 class="sub-heading">About Me</h1>
-            <div class="divider"></div>
-            <p class="sub-para">Hi I'm a budding backend developer on an exciting journey into the world of server-side
-                technologies. My passion lies in building robust and scalable solutions that power the backbone of web
-                applications.Me, my brain, my eyes,my hands and some materials like a computer and some cool
-                programming languages can do very spectacular things. I can't think about how much great things we
-                could do if we worked together.
-            </p>
-            <div class="about-col">
-
-
-                <div class="info-col">
-                    <h2>backend Developer</h2>
-                    <p class="sub-para">I consider myself as an individual with a strong sense of adaptability.
-                        My experiences have shaped me into a resourceful problem solver who enjoys taking on new
-                        challenges. </p>
-                    <div class="icon-list-col">
-
-                        <div classs="icon-list">
-                            <ul>
-                                <li><i class="fa-solid fa-angle-right"></i><strong>Age:</strong><span>22</span></li>
-                                <li><i
-                                        class="fa-solid fa-angle-right"></i><strong>Email:</strong><span>www.mariebienvenueu@gmail.com</span>
-                                </li>
-                                <li><i
-                                        class="fa-solid fa-angle-right"></i><strong>Phone:</strong><span>+250780577120</span>
-                                </li>
-                                <li><i class="fa-solid fa-angle-right"></i><strong>City:</strong><span>Kigali</span>
-                                </li>
-                            </ul>
-                        </div>
-
-
+                    <div classs="icon-list">
+                        <ul>
+                            <li><i class="fa-solid fa-angle-right"></i><strong>Age:</strong><span>22</span></li>
+                            <li><i
+                                    class="fa-solid fa-angle-right"></i><strong>Email:</strong><span>www.mariebienvenueu@gmail.com</span>
+                            </li>
+                            <li><i
+                                    class="fa-solid fa-angle-right"></i><strong>Phone:</strong><span>+250780577120</span>
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i><strong>City:</strong><span>Kigali</span>
+                            </li>
+                        </ul>
                     </div>
+
+
                 </div>
             </div>
+        </div>
 
-        </section>
-
-
-
+    </section>
 
 
 
@@ -104,103 +85,107 @@
 
 
 
-        <section id="skill">
-            <h1 class="sub-heading">Skills</h1>
-            <div class="divider"></div>
-            <p class="sub-para">
-                I am a self-motivated programmer and designer, and I am willing to get further in the design and
-                programming
-                field.
-                I am more interested in the form and design of things, therefore, I am very interested in learning and
-                finding ways of being able
-                to be fluent in the most needed languages, design programs, and environments mostly used today, but also
-                looking forward to the vision
-                and future of design in general.
-            </p>
-            <div class="skill-row">
-                <div class="skill-box">
-                    <div class="skill-info">
-                        <h2>HTML</h2>
-                        <h2>85%</h2>
-                    </div>
-                    <div class="skill-outer-line">
-                        <div class="skill-inner-line" style="width:85%"></div>
-                    </div>
+
+
+
+    <section id="skill">
+        <h1 class="sub-heading">Skills</h1>
+        <div class="divider"></div>
+        <p class="sub-para">
+            I am a self-motivated programmer and designer, and I am willing to get further in the design and
+            programming
+            field.
+            I am more interested in the form and design of things, therefore, I am very interested in learning and
+            finding ways of being able
+            to be fluent in the most needed languages, design programs, and environments mostly used today, but also
+            looking forward to the vision
+            and future of design in general.
+        </p>
+        <div class="skill-row">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <h2>HTML</h2>
+                    <h2>85%</h2>
                 </div>
-                <div class="skill-box">
-                    <div class="skill-info">
-                        <h2>CSS</h2>
-                        <h2>85%</h2>
-                    </div>
-                    <div class="skill-outer-line">
-                        <div class="skill-inner-line" style="width:85%"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-info">
-                        <h2>Javascript</h2>
-                        <h2>85%</h2>
-                    </div>
-                    <div class="skill-outer-line">
-                        <div class="skill-inner-line" style="width:85%"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-info">
-                        <h2>Web Design</h2>
-                        <h2>85%</h2>
-                    </div>
-                    <div class="skill-outer-line">
-                        <div class="skill-inner-line" style="width:85%"></div>
-                    </div>
+                <div class="skill-outer-line">
+                    <div class="skill-inner-line" style="width:85%"></div>
                 </div>
             </div>
-        </section>
-
-
-
-        <section id="contact">
-            <h1 class="sub-heading">Contact</h1>
-            <div class="divider"></div>
-            <p class="sub-para">"Let's connect! Explore my work for a glimpse into my work. I'm open to collaborations
-                and excited about new opportunities. Feel free to reach out for a conversation!"</p>
-            <div class="contact-row">
-                <div class=" contact-left">
-                    <div class="icon-box"></div>
-                    <div class="icon"><i class="fa solid fa-envelope"></i>
-                        <div class="info">
-                            <h4>Email</h4>
-                            <p>mariebienvenueu@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="icon-box"></div>
-                    <div class="icon"><i class="fa solid fa-phone"></i>
-                        <div class="info">
-                            <h4>Phone</h4>
-                            <p>+250780577120</p>
-                        </div>
-                    </div>
-                    <div class="icon-box"></div>
-                    <div class="icon"><i class="fa solid fa-location-dot"></i>
-                        <div class="info">
-                            <h4>Location</h4>
-                            <p>Kacyiru,Kigali,Rwanda</p>
-                        </div>
-                    </div>
-
+            <div class="skill-box">
+                <div class="skill-info">
+                    <h2>CSS</h2>
+                    <h2>85%</h2>
                 </div>
-                <div class=" contact-right">
-                    <form action="">
-                        <input type="text" name="name" placeholder="Your Name"></input>
-                        <input type="text" name="name" placeholder="Your Email "></input>
-                        <input type="text" name="name" placeholder="Your subject"></input>
-                        <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send Message">
-                    </form>
+                <div class="skill-outer-line">
+                    <div class="skill-inner-line" style="width:85%"></div>
                 </div>
             </div>
-        </section>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <h2>Javascript</h2>
+                    <h2>85%</h2>
+                </div>
+                <div class="skill-outer-line">
+                    <div class="skill-inner-line" style="width:85%"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <h2>Web Design</h2>
+                    <h2>85%</h2>
+                </div>
+                <div class="skill-outer-line">
+                    <div class="skill-inner-line" style="width:85%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="contact">
+        <h1 class="sub-heading">Contact</h1>
+        <div class="divider"></div>
+        <p class="sub-para">"Let's connect! Explore my work for a glimpse into my work. I'm open to collaborations
+            and excited about new opportunities. Feel free to reach out for a conversation!"</p>
+        <div class="contact-row">
+            <div class=" contact-left">
+                <div class="icon-box"></div>
+                <div class="icon"><i class="fa solid fa-envelope"></i>
+                    <div class="info">
+                        <h4>Email</h4>
+                        <p>mariebienvenueu@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="icon-box"></div>
+                <div class="icon"><i class="fa solid fa-phone"></i>
+                    <div class="info">
+                        <h4>Phone</h4>
+                        <p>+250780577120</p>
+                    </div>
+                </div>
+                <div class="icon-box"></div>
+                <div class="icon"><i class="fa solid fa-location-dot"></i>
+                    <div class="info">
+                        <h4>Location</h4>
+                        <p>Kacyiru,Kigali,Rwanda</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" contact-right">
+                <form action="">
+                    <input type="text" name="name" placeholder="Your Name"></input>
+                    <input type="text" name="name" placeholder="Your Email "></input>
+                    <input type="text" name="name" placeholder="Your subject"></input>
+                    <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -208,8 +193,5 @@
 
 
 
-
-    </main>
 </body>
-
 </html>

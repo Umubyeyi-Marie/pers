@@ -1,246 +1,189 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root {
-    --sideBGColor: #040b14;
+    
     --themeColor: #00A78E;
     --iconBGColor: #2C2F3F;
     --textColor: #525252;
     --bgColor: #F7f7F7;
 }
 
-header {
-    height: 100vh;
-    width: 300px;
-    padding: 15px 30px;
-    background-color: var(--sideBGColor);
-    overflow-y: auto;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    transition: 0.4s;
-    z-index: 99;
-}
-
-header.profile {
-    text-align: center;
-    margin: 10px 0;
-
-
-}
-
-header .profile img {
-    width: 150px;
-    border-radius: 50%;
-    border: 10px solid var(--iconBGColor)
-}
-
-header.profile h1 {
-    color: white;
-    font-weight: 600;
-
-}
-
-header .profile .social-icons a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: var(--iconBGColor);
-    color: white;
-    font-size: 18px;
-    margin: 1.5px;
-    transition: 0.4s
-}
-
-
-
-header nav {
-    margin-top: 30px;
-}
-
-header nav ul li a {
-    display: inline-block;
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    padding: 7px 10px;
-    margin: 7px 0;
-    color: lightgray;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.6px;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+
 }
 
-header nav ul li a i {
-    margin-right: 10px;
-    font-size: 20px;
-    transition: 0.4s;
+*::selection {
+    background-color: var(--iconBGColor);
+    color:var(--textColor);
 }
 
-header nav ul li a:hover i {
-    color: var(--themeColor);
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
-header nav ul li .active i {
-    color: var(--themeColor);
+html::-webkit-scrollbar {
+    width: 1.4rem;
 }
 
-header .footer {
-    text-align: center;
-    background-color: var(--sideBGColor);
-    width: 300px;
-    color: lightgray;
-    font-size: 14px;
-    letter-spacing: 0.6px;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    transition: 0.4s;
+html::-webkit-scrollbar-track {
+    background-color:var(--bgColor);
 }
 
-header .footer p a {
-    color: var(--themeColor);
-}
-
-#MenuBtn {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    color: white;
-    background-color: var(--themeColor);
-    text-align: center;
-    line-height: 42px;
-    border-radius: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
-    display: none;
-    z-index: 999;
-}
-
-@media only screen and(max-width:1050px) {
-    header {
-        left: -300px;
-    }
-
-    header .footer {
-        left: -300px;
-    }
-
-    #MenuBtn {
-        display: block;
-    }
-}
-
-.mobile-nav-active header {
-    left: 0;
-}
-
-.mobile-nav-active header .footer {
-    left: 0;
-}
-
-main {
-    margin-left: 300px;
-    transition: 0.3s;
+body {
+    background-color:#333;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+    
+    
     
 }
 
-@media only screen and (max-width:1050) {
-    main {
-        margin-left: 0;
-    }
-
+section {
+    min-height: 100vh;
+    padding: 1rem;
+    flex-basis: 40%;
 }
 
-#home {
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 70px;
-    position: relative;
-
+.btn {
+    padding: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
 }
 
-#home::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.431);
-    position: absolute;
+.btn i {
+    padding: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    background: var(--themeColor);
+}
+
+header {
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
 
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.7rem solid var(--themeColor);
+}
+
+header .user .name,
+header .user .post {
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .user .name {
+    font-size: 3.5rem;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background-color: var(--themeColor);
+}
+
+#menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+    width: 100%;
+    padding: 0 12rem;
+    border-bottom: 4px solid var(--themeColor);
+    
 
 }
 
-#home .home-row {
-    z-index: 1
+.home h3,
+.home h1,
+.home p {
+    color: #fff;
 }
 
-#home .home-row h1 {
-    font: size 60px;
-    color: white;
-    font-weight: 600;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-    line-height: 70px;
+.home h3 {
+    font-size: 2.5rem;
 }
 
-#home,
-home-row h1 span {
+.home h1 {
+    font-size: 5rem;
+}
+
+.home p span {
     color: var(--themeColor);
 }
 
-#home,
-home-row p {
-    color: whitesmoke;
-    font-size: 30px;
-    font-weight: 500;
+.home p,
+.home p span {
+    font-size: 5rem;
 }
 
-#home,
-home-row p span {
-    border-bottom: 4px solid var(--themeColor);
-}
-
-@media only screen and(max-width:670px) {
-    #home {
-        padding: 30px;
-    }
-
-    #home .home h1 {
-        font-size: 35px;
-        letter-spacing: 0;
-        line-height: 70px;
-    }
-
-    #home .home-row h1 br {
-        display: none;
-    }
-
-    #home .home-row p {
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-}
 
 /*---about --section ---*/
 #about {
     padding: 70px;
-    background-color:rgb(219, 216, 219);
+    background-color:#333;
     border-bottom: 4px solid var(--themeColor);
     height: 100vh;
     width: 100%;
@@ -260,7 +203,7 @@ home-row p span {
 }
 
 .sub-para{
-    color: var(--textColor);
+    color: var(--bgColor);
     font-size: 15px;
     letter-spacing: 0.4px;
     font-weight: 400;
@@ -299,7 +242,7 @@ home-row p span {
 }
 
 #about .about-col .info-col p {
-    color: var(--textColor);
+    color: var(--bgColor);
     font-size: 15px;
     letter-spacing: 0.5px;
     font-style: italic;
@@ -328,7 +271,7 @@ home-row p span {
 }
 
 #about .about-col .info-col .icon-list-col ul li span {
-    color: var(--textColor);
+    color: var(--bgColor);
     font-weight: 500;
     font-size: 15px;
 }
@@ -349,7 +292,7 @@ home-row p span {
     }
 
     #about .about-col .img-col img {
-        width: 50%
+        width: 50%;
     }
 
     #about .about-col .info h2 {
@@ -432,7 +375,7 @@ home-row p span {
     /*--- skill -----section-----*/
     #skill{
         padding: 80px;
-        background-color: rgb(246, 237, 245);
+        background-color: #333;
         border-bottom: 4px solid var(--themeColor);
         height: 100vh;
         width:100%;
@@ -452,7 +395,7 @@ home-row p span {
         line-height: 4;
     }
     #skill .skill-row .skill-box .skill-info h2{
-        color: var(--sideBGColor);
+        color: var(--bgColor);
         font-weight: 600;
         font-size: 15px;
         font-style: italic;
@@ -477,13 +420,16 @@ home-row p span {
             grid-gap:10px;
         }
     }
+
+
+    
     /*--- contact---*/
     #contact{
         padding: 70px 30px;
         border-bottom: 4px solid var(--themeColor);
        width:100%;
        height:auto;
-       background-color: rgb(250, 242, 245);
+       background-color:#333;
         
     }
     #contact .contact-row{
@@ -536,13 +482,13 @@ home-row p span {
         font-weight: 500;
     }
     #contact .contact-row .contact-right{
-        flex-basis:60%;
-        min-width:60%;
+        flex-basis:50%;
+        min-width:40%;
         background-color: white;
         box-shadow: 0 0 20px rgba(0,0,0, 20%);
         border-radius: 10%;
         padding: 30px;
-        
+    
 
     }
     #contact .contact-row .contact-right form{
